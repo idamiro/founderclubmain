@@ -3435,3 +3435,179 @@ img{
     font-size:20px;
   }
 }
+
+/* Premium visual polish */
+body{
+  background:
+    radial-gradient(circle at 18% -8%, rgba(224,173,114,.14), transparent 28rem),
+    radial-gradient(circle at 86% 8%, rgba(15,31,53,.08), transparent 30rem),
+    var(--paper);
+}
+.full-hero{
+  padding:26px 0 0 !important;
+  background:linear-gradient(180deg,rgba(251,247,239,.88),rgba(251,247,239,0)) !important;
+}
+.full-hero-card{
+  border-radius:34px !important;
+  border:1px solid rgba(255,255,255,.24) !important;
+  box-shadow:0 34px 105px rgba(9,17,31,.22) !important;
+}
+.full-hero-card img{
+  filter:saturate(1.05) contrast(1.03) !important;
+}
+.full-hero-card::after{
+  background:
+    linear-gradient(90deg,rgba(6,13,25,.94) 0%,rgba(6,13,25,.72) 38%,rgba(6,13,25,.18) 72%),
+    linear-gradient(180deg,rgba(6,13,25,.10) 0%,rgba(6,13,25,.62) 100%) !important;
+}
+.full-hero-overlay{
+  max-width:650px !important;
+  padding:0 !important;
+}
+.full-hero-overlay .kicker{
+  color:#f0c98b !important;
+}
+.full-hero-overlay .kicker::before{
+  background:#f0c98b !important;
+}
+.full-hero-overlay h1{
+  max-width:640px !important;
+  font-size:clamp(44px,6.2vw,84px) !important;
+  line-height:.96 !important;
+  letter-spacing:0 !important;
+  margin-bottom:18px !important;
+  color:#fff !important;
+  text-wrap:balance;
+}
+.full-hero-overlay p{
+  max-width:610px !important;
+  font-size:18px !important;
+  line-height:1.68 !important;
+  color:rgba(255,255,255,.82) !important;
+}
+.hero-actions .btn{
+  min-height:50px !important;
+  padding:0 22px !important;
+}
+.hero-actions .btn-dark{
+  background:linear-gradient(135deg,var(--copper),var(--copper2)) !important;
+  border-color:transparent !important;
+  color:#211306 !important;
+}
+.hero-actions .btn-light{
+  background:rgba(255,255,255,.13) !important;
+  border-color:rgba(255,255,255,.24) !important;
+  color:#fff !important;
+  backdrop-filter:blur(12px);
+}
+.full-hero-stats{
+  width:min(980px,calc(100% - 52px)) !important;
+  margin:-64px auto 0 !important;
+  position:relative !important;
+  z-index:4 !important;
+  gap:16px !important;
+}
+.full-hero-stats .stat{
+  border-radius:24px !important;
+  background:rgba(255,255,255,.90) !important;
+  border:1px solid rgba(9,17,31,.08) !important;
+  box-shadow:0 24px 75px rgba(9,17,31,.13) !important;
+  backdrop-filter:blur(18px);
+}
+.full-hero-stats .stat strong{
+  color:var(--ink) !important;
+}
+.section{
+  position:relative;
+}
+.section-head{
+  align-items:center !important;
+}
+.section-head h2{
+  letter-spacing:0 !important;
+  text-wrap:balance;
+}
+.steps{
+  gap:22px !important;
+}
+.step{
+  border-radius:24px !important;
+  padding:30px !important;
+  background:
+    linear-gradient(180deg,#fff,rgba(255,255,255,.82)) !important;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.step:hover{
+  transform:translateY(-5px);
+  border-color:rgba(184,121,61,.28) !important;
+  box-shadow:0 24px 70px rgba(9,17,31,.10) !important;
+}
+.step-num{
+  border-radius:16px !important;
+  background:linear-gradient(135deg,rgba(184,121,61,.16),rgba(224,173,114,.24)) !important;
+}
+.membership-selector{
+  border-top:1px solid rgba(9,17,31,.08);
+  border-bottom:1px solid rgba(9,17,31,.08);
+}
+.selector-card{
+  border-radius:26px !important;
+}
+.selector-card:hover{
+  box-shadow:0 28px 82px rgba(9,17,31,.13) !important;
+}
+.event-card,
+.training-list-card,
+.social-activity-card,
+.partner-card,
+.honorary-partner-card{
+  transition:transform .24s ease, box-shadow .24s ease, border-color .24s ease !important;
+}
+.event-card h3,
+.training-info h3,
+.social-activity-content h2{
+  letter-spacing:0 !important;
+  text-wrap:balance;
+}
+.footer{
+  margin-top:0 !important;
+}
+@media(max-width:860px){
+  .full-hero-card,
+  .full-hero-card img{
+    min-height:680px !important;
+  }
+  .full-hero-card::after{
+    background:linear-gradient(180deg,rgba(6,13,25,.52) 0%,rgba(6,13,25,.92) 76%) !important;
+  }
+  .full-hero-overlay{
+    left:24px !important;
+    right:24px !important;
+    bottom:86px !important;
+  }
+  .full-hero-stats{
+    width:calc(100% - 34px) !important;
+    margin:-46px auto 0 !important;
+    grid-template-columns:1fr !important;
+  }
+}
+@media(max-width:560px){
+  .full-hero{
+    padding-top:16px !important;
+  }
+  .full-hero-card{
+    border-radius:24px !important;
+  }
+  .full-hero-overlay h1{
+    font-size:39px !important;
+  }
+  .full-hero-overlay p{
+    font-size:15.5px !important;
+  }
+  .hero-actions{
+    width:100%;
+  }
+  .hero-actions .btn{
+    width:100%;
+  }
+}
