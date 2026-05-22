@@ -5,7 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Founder Club AZ</title>
-<meta content="Founder Club AZ" name="description"/>
+<meta content="Founder Club AZ biznes sahibləri, rəhbərlər və tərəfdaşlar üçün networking, təlim və beynəlxalq əməkdaşlıq platformasıdır." name="description"/>
+<link href="https://founderclubmain.blaise-pt05.workers.dev/" rel="canonical"/>
+<meta content="Founder Club AZ" property="og:title"/>
+<meta content="Founder Club AZ biznes sahibləri və rəhbərlər üçün networking, təlim və tərəfdaşlıq platformasıdır." property="og:description"/>
+<meta content="https://founderclubmain.blaise-pt05.workers.dev/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Noto+Sans:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
@@ -24,7 +30,7 @@
 <div class="dropdown-menu">
 <a href="talimler.html">Təlimlər</a>
 <a href="tedbirler.html">Tədbirlər</a>
-<a href="#">Sosial Fəaliyyətlər</a>
+<a href="sosial-fealiyyetler.html">Sosial Fəaliyyətlər</a>
 <a href="sefirlikler.html">Səfirliklərlə Görüşlər</a>
 </div>
 </div>
@@ -34,13 +40,13 @@
 <div class="dropdown-menu">
 <a href="fexri-partnyorlar.html">Fəxri Partnyorlar</a>
 <a href="partnyorlar.html">Partnyorlar</a>
-<a href="#">Əməkdaşlıqlar</a>
-<a href="#">Beynəlxalq Əməkdaşlıqlar</a>
-<a href="#">Partnyor Ol</a>
+<a href="emekdasliqlar.html">Əməkdaşlıqlar</a>
+<a href="beynalxalq-emekdasliqlar.html">Beynəlxalq Əməkdaşlıqlar</a>
+<a href="partnyorlar.html">Partnyor Ol</a>
 </div>
 </div>
-<a href="#">Qanunvericilik</a>
-<a href="#">Qalereya</a>
+<a href="qanunvericilik.html">Qanunvericilik</a>
+<a href="qalereya.html">Qalereya</a>
 <a href="index.html#contact">Əlaqə</a>
 </nav>
 <div class="nav-actions">
@@ -288,11 +294,11 @@
 <div class="contact-item"><strong>Əlaqə</strong><p>+994 55 206 32 22</p></div>
 </div>
 </div>
-<form class="form">
-<input class="input" placeholder="Ad Soyad" required=""/>
-<input class="input" placeholder="Şirkət"/>
-<input class="input" placeholder="Email" required="" type="email"/>
-<select required="">
+<form class="form" data-contact-form="">
+<input autocomplete="name" class="input" name="name" placeholder="Ad Soyad" required=""/>
+<input autocomplete="organization" class="input" name="company" placeholder="Şirkət"/>
+<input autocomplete="email" class="input" name="email" placeholder="Email" required="" type="email"/>
+<select name="plan" required="">
 <option value="">Paket seçin</option>
 <option>Üzvlük — Silver (1800 AZN)</option>
 <option>Üzvlük — Gold (2800 AZN)</option>
@@ -301,7 +307,7 @@
 <option>Beynəlxalq — Gold (5000 USD)</option>
 <option>Beynəlxalq — Platinum (12000 USD)</option>
 </select>
-<textarea placeholder="Mesaj"></textarea>
+<textarea name="message" placeholder="Mesaj"></textarea>
 <button class="btn btn-copper" type="submit">Müraciət Göndər</button>
 </form>
 </div>
