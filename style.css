@@ -4181,3 +4181,83 @@ body{
     width:100% !important;
   }
 }
+
+/* Mobile menu hard fix */
+@media(max-width:760px){
+  .header{
+    z-index:10000 !important;
+    background:#fbf7ef !important;
+  }
+  .nav{
+    width:100% !important;
+    min-height:64px !important;
+  }
+  .nav-links.open{
+    display:block !important;
+    position:fixed !important;
+    inset:64px 0 0 0 !important;
+    width:100vw !important;
+    height:calc(100dvh - 64px) !important;
+    max-height:none !important;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+    padding:22px 24px 44px !important;
+    background:#fbf7ef !important;
+    border-top:1px solid rgba(9,17,31,.10) !important;
+    box-shadow:0 28px 80px rgba(9,17,31,.18) !important;
+    z-index:9999 !important;
+  }
+  .nav-links.open::before{
+    content:"Menyu";
+    display:block;
+    margin:0 0 10px;
+    color:var(--copper);
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+  }
+  .nav-links.open > a,
+  .nav-links.open > .nav-item > a{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    width:100% !important;
+    min-height:48px !important;
+    padding:14px 0 !important;
+    color:var(--ink) !important;
+    font-size:18px !important;
+    font-weight:900 !important;
+    border-bottom:1px solid rgba(9,17,31,.10) !important;
+  }
+  .nav-links.open .nav-item{
+    display:block !important;
+    width:100% !important;
+  }
+  .nav-links.open .dropdown-menu{
+    position:static !important;
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:8px 0 14px 18px !important;
+    background:rgba(255,255,255,.42) !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(9,17,31,.08) !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+  }
+  .nav-links.open .dropdown-menu a{
+    display:block !important;
+    width:100% !important;
+    min-height:38px !important;
+    padding:9px 0 !important;
+    color:#56606d !important;
+    font-size:14.5px !important;
+    font-weight:800 !important;
+    border:0 !important;
+  }
+  .nav-actions{
+    display:none !important;
+  }
+}
