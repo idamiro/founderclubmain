@@ -7,6 +7,16 @@ if (menuBtn && navLinks) {
   });
 }
 
+document.querySelectorAll(".has-dropdown > a").forEach(link => {
+  link.addEventListener("click", event => {
+    if (window.innerWidth > 760) return;
+    event.preventDefault();
+    const item = link.closest(".has-dropdown");
+    if (!item) return;
+    item.classList.toggle("mobile-open");
+  });
+});
+
 document.querySelectorAll("[data-tab]").forEach(button => {
   button.addEventListener("click", () => {
     const tab = button.dataset.tab;
