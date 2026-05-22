@@ -3735,3 +3735,86 @@ body{
     font-size:12px !important;
   }
 }
+
+/* Full-bleed hero correction */
+.full-hero{
+  padding:0 !important;
+  background:var(--paper) !important;
+  overflow:visible !important;
+}
+.full-hero .container{
+  width:100% !important;
+  max-width:none !important;
+}
+.full-hero-card{
+  border-radius:0 !important;
+  border:0 !important;
+  box-shadow:none !important;
+  min-height:590px !important;
+  animation:heroFadeIn .75s ease both;
+}
+.full-hero-card img{
+  min-height:590px !important;
+  animation:heroImageDrift 14s ease-in-out infinite alternate;
+}
+.full-hero-overlay{
+  left:max(34px,calc((100vw - 1180px) / 2 + 17px)) !important;
+  right:auto !important;
+  bottom:84px !important;
+}
+.full-hero-stats{
+  width:min(980px,calc(100% - 34px)) !important;
+  margin:26px auto 0 !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  position:relative !important;
+  z-index:2 !important;
+}
+.full-hero-stats .stat{
+  animation:statRise .55s ease both;
+}
+.full-hero-stats .stat:nth-child(2){animation-delay:.08s;}
+.full-hero-stats .stat:nth-child(3){animation-delay:.16s;}
+@keyframes heroFadeIn{
+  from{opacity:.86;}
+  to{opacity:1;}
+}
+@keyframes heroImageDrift{
+  from{transform:scale(1);}
+  to{transform:scale(1.035);}
+}
+@keyframes statRise{
+  from{opacity:0;transform:translateY(14px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@media(max-width:860px){
+  .full-hero-card,
+  .full-hero-card img{
+    min-height:560px !important;
+  }
+  .full-hero-overlay{
+    left:24px !important;
+    right:24px !important;
+    bottom:68px !important;
+  }
+  .full-hero-stats{
+    width:min(620px,calc(100% - 34px)) !important;
+    margin:20px auto 0 !important;
+    grid-template-columns:1fr !important;
+  }
+}
+@media(max-width:560px){
+  .full-hero-card,
+  .full-hero-card img{
+    min-height:520px !important;
+  }
+  .full-hero-overlay{
+    bottom:52px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .full-hero-card,
+  .full-hero-card img,
+  .full-hero-stats .stat{
+    animation:none !important;
+  }
+}
