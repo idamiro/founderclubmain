@@ -3625,3 +3625,113 @@ body{
     width:100%;
   }
 }
+
+/* Hero scale correction */
+.nav{
+  min-height:68px !important;
+}
+.logo img.site-logo{
+  height:44px !important;
+  max-width:178px !important;
+}
+.nav-links{
+  gap:15px !important;
+}
+.nav-links > a,
+.nav-item > a{
+  padding:23px 0 !important;
+  font-size:12.5px !important;
+}
+.full-hero{
+  padding-top:18px !important;
+}
+.full-hero-card,
+.full-hero-card img{
+  min-height:560px !important;
+}
+.full-hero-overlay{
+  max-width:510px !important;
+}
+.full-hero-overlay h1{
+  max-width:500px !important;
+  font-size:clamp(30px,3.8vw,50px) !important;
+  line-height:1.08 !important;
+  margin-bottom:12px !important;
+}
+.full-hero-overlay p{
+  max-width:500px !important;
+  font-size:14.5px !important;
+  line-height:1.58 !important;
+}
+.hero-actions{
+  margin-top:20px !important;
+}
+.hero-actions .btn{
+  min-height:42px !important;
+  padding:0 17px !important;
+  font-size:13px !important;
+}
+.full-hero-stats{
+  width:min(780px,calc(100% - 44px)) !important;
+  margin:-42px auto 0 !important;
+  gap:12px !important;
+}
+.full-hero-stats .stat{
+  min-height:92px !important;
+  padding:18px 20px !important;
+  border-radius:18px !important;
+}
+.full-hero-stats .stat strong{
+  font-size:clamp(26px,2.6vw,36px) !important;
+  line-height:1 !important;
+  margin-bottom:5px !important;
+}
+.full-hero-stats .stat span{
+  font-size:12.5px !important;
+  line-height:1.25 !important;
+}
+@media(max-width:860px){
+  .nav{
+    min-height:66px !important;
+  }
+  .nav-links.open{
+    top:66px !important;
+  }
+  .full-hero-card,
+  .full-hero-card img{
+    min-height:560px !important;
+  }
+  .full-hero-overlay{
+    bottom:78px !important;
+  }
+  .full-hero-stats{
+    width:min(520px,calc(100% - 34px)) !important;
+    margin:-36px auto 0 !important;
+  }
+}
+@media(max-width:560px){
+  .logo img.site-logo{
+    height:40px !important;
+    max-width:152px !important;
+  }
+  .full-hero-card,
+  .full-hero-card img{
+    min-height:530px !important;
+  }
+  .full-hero-overlay h1{
+    font-size:28px !important;
+  }
+  .full-hero-overlay p{
+    font-size:13.5px !important;
+  }
+  .full-hero-stats .stat{
+    min-height:82px !important;
+    padding:15px 18px !important;
+  }
+  .full-hero-stats .stat strong{
+    font-size:28px !important;
+  }
+  .full-hero-stats .stat span{
+    font-size:12px !important;
+  }
+}
