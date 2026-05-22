@@ -187,7 +187,10 @@ document.querySelectorAll(".faq-question").forEach((button) => {
           <h3>${name}</h3>
           <p>${subtitle}</p>
         </div>
-        <div class="selector-detail-price">${price}</div>
+        <div class="selector-detail-actions">
+          <div class="selector-detail-price">${price}</div>
+          <button class="selector-detail-close" type="button">Bağla</button>
+        </div>
       </div>
       <ul class="selector-detail-list">${items}</ul>
     `;
@@ -225,6 +228,13 @@ document.querySelectorAll(".faq-question").forEach((button) => {
       event.preventDefault();
       selectCard(card);
     });
+  });
+
+  section.addEventListener("click", (event) => {
+    const closeButton = event.target.closest(".selector-detail-close");
+    if (!closeButton) return;
+    const panel = closeButton.closest(".selector-panel");
+    if (panel) clearPanel(panel);
   });
 
   // Important: no automatic default selection.
