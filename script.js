@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
+const isEnglishPage = document.documentElement.lang === "en";
 if (menuBtn && navLinks) {
   menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("open");
@@ -30,7 +31,9 @@ document.querySelectorAll("[data-tab]").forEach(button => {
 document.querySelectorAll("form").forEach(form => {
   form.addEventListener("submit", e => {
     e.preventDefault();
-    alert("Müraciətiniz qeydə alındı. Komandamız sizinlə ən qısa zamanda əlaqə saxlayacaq.");
+    alert(isEnglishPage
+      ? "Your application has been received. Our team will contact you shortly."
+      : "M\u00fcraci\u0259tiniz qeydə al\u0131nd\u0131. Komandam\u0131z sizinlə ən q\u0131sa zamanda əlaqə saxlayacaq.");
     form.reset();
   });
 });
@@ -52,12 +55,14 @@ document.querySelectorAll("#plans .details-toggle").forEach(button => {
       if(openCard !== card){
         openCard.classList.remove("open");
         const otherButton = openCard.querySelector(".details-toggle");
-        if(otherButton) otherButton.textContent = "Daha Ətraflı ↓";
+        if(otherButton) otherButton.textContent = isEnglishPage ? "More Details \u2193" : "Daha \u018ftrafl\u0131 \u2193";
       }
     });
 
     card.classList.toggle("open", shouldOpen);
-    button.textContent = shouldOpen ? "Bağla ↑" : "Daha Ətraflı ↓";
+    button.textContent = shouldOpen
+      ? (isEnglishPage ? "Close \u2191" : "Ba\u011fla \u2191")
+      : (isEnglishPage ? "More Details \u2193" : "Daha \u018ftrafl\u0131 \u2193");
   });
 });
 
@@ -166,7 +171,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
     panel.querySelectorAll(".selector-card").forEach((card) => {
       card.classList.remove("is-selected");
       const btn = card.querySelector(".selector-btn");
-      if (btn) btn.textContent = "Paketi seç →";
+      if (btn) btn.textContent = isEnglishPage ? "Select plan \u2192" : "Paketi se\u00e7 \u2192";
     });
 
     const detail = panel.querySelector(".selector-detail");
@@ -199,7 +204,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
         </div>
         <div class="selector-detail-actions">
           <div class="selector-detail-price">${price}</div>
-          <button class="selector-detail-close" type="button">Bağla</button>
+          <button class="selector-detail-close" type="button">${isEnglishPage ? "Close" : "Ba\u011fla"}</button>
         </div>
       </div>
       <ul class="selector-detail-list">${items}</ul>
@@ -214,7 +219,9 @@ document.querySelectorAll(".faq-question").forEach((button) => {
     panel.querySelectorAll(".selector-card").forEach((c) => {
       c.classList.toggle("is-selected", c === card);
       const btn = c.querySelector(".selector-btn");
-      if (btn) btn.textContent = c === card ? "Seçildi ✓" : "Paketi seç →";
+      if (btn) btn.textContent = c === card
+        ? (isEnglishPage ? "Selected \u2713" : "Se\u00e7ildi \u2713")
+        : (isEnglishPage ? "Select plan \u2192" : "Paketi se\u00e7 \u2192");
     });
 
     renderDetail(panel, card);

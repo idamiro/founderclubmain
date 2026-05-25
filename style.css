@@ -4291,3 +4291,54 @@ body{
     transform:translateY(0);
   }
 }
+
+/* Language switch shared by Azerbaijani and English pages */
+.language-switch{
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+  flex:0 0 auto;
+  padding:3px;
+  border:1px solid rgba(9,17,31,.10);
+  border-radius:999px;
+  background:#fff;
+  font-size:12px;
+  font-weight:900;
+}
+.language-switch a,
+.language-switch span{
+  display:grid;
+  place-items:center;
+  min-width:35px;
+  min-height:35px;
+  padding:0 7px;
+  border-radius:999px;
+  color:var(--ink);
+  text-decoration:none;
+}
+.language-switch .active{
+  background:var(--ink);
+  color:#fff;
+}
+.language-switch a:hover{
+  background:rgba(9,17,31,.06);
+}
+html[lang="en"] .nav-links.open::before{
+  content:"Menu";
+}
+@media(max-width:1080px){
+  .language-switch{
+    margin-left:auto;
+  }
+}
+@media(max-width:760px){
+  .language-switch{
+    padding:2px;
+  }
+  .language-switch a,
+  .language-switch span{
+    min-width:31px;
+    min-height:31px;
+    font-size:11px;
+  }
+}
